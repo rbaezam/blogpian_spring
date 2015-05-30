@@ -14,8 +14,9 @@ $( document ).ready(function() {
 
                 var title = '<h4>' + post.title + '</h4>';
                 var link = '<a href="/posts/' + post.id + '">' + title + '</a>';
+                var publishedAtText = '<small>' + new Date(post.createdAt) + '</small>';
                 var bodyText = '<p>' + body + '</p>';
-                var li = '<li>' + link + bodyText + '</li>';
+                var li = '<li>' + link + publishedAtText + bodyText + '</li>';
                 $('#posts').append(li);
             });
         }
